@@ -28,7 +28,7 @@ class TestSource {
     }
 
     @Test fun f1() {
-        assertEquals("Hello, world!-", getGreeting())
+        assertEquals("Hello, world!", getGreeting())
         assertThat(getGreeting(), `is`("Hello, world!"))
     }
 
