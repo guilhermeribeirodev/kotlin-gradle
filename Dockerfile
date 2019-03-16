@@ -7,8 +7,7 @@ RUN ./gradlew build --info
 FROM openjdk:8-jre-slim
 EXPOSE 8080
 COPY --from=builder /home/gradle/ /app/
-WORKDIR /app
-RUN ls
-#RUN tar -xvf easytext.web.tar
-#WORKDIR /app/easytext.web
-#CMD bin/easytext.web
+WORKDIR /app/build/libs/
+#RUN ls
+ENTRYPOINT [ "sh", "-c", "java -jar customer-1.0-SNAPSHOT.jar" ]
+#CMD java -jar customer-1.0-SNAPSHOT.jar

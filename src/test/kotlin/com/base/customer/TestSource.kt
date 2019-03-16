@@ -1,4 +1,4 @@
-package com.base.costumer
+package com.base.customer
 
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
